@@ -7,12 +7,12 @@ environment:
   sdk: '>=2.17.1 <3.0.0'
 
 dependencies:
-  dio: ^4.0.0
+  dio:
   http:
-  html: ^0.15.0
-  xpath: ^0.1.0
+  html:
+  xpath:
   csv:
-  yaml: ^3.1.0
+  yaml:
   sprintf:
   args:
   intl:

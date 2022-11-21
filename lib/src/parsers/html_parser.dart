@@ -94,6 +94,10 @@ class HtmlListParser {
     _elements.forEach((element) => processor(ElementParser(element)));
   }
 
+  List<T> map<T>(T Function(ElementParser elementParser) processor) {
+    return _elements.map((element) => processor(ElementParser(element))).toList();
+  }
+
   List<Element> elements() {
     return _elements;
   }

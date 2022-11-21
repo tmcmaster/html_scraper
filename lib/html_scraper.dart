@@ -1,6 +1,6 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
 library html_scraper;
 
-export 'src/html_scraper_base.dart';
+export 'src/apps/base_app.dart';
+export 'src/parsers/html_parser.dart';
+export 'src/parsers/page_parser.dart';
+export 'src/parsers/url_parser.dart';

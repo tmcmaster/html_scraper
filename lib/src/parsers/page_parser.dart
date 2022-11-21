@@ -7,7 +7,7 @@ import 'package:html_scraper/src/http/http_loader.dart';
 import 'package:html_scraper/src/parsers/html_parser.dart';
 
 class PageParser {
-  static final TESTING = true;
+  static final TESTING = false;
 
   final String url;
   final Map<String, dynamic> headers;
@@ -23,10 +23,10 @@ class PageParser {
 
   Future<Map<String, T>> processAll<T>({
     Map<String, T Function(ElementParser document)>? processorMap,
-    List<dynamic Function(ElementParser document)>? processorList,
+    List<Map<String, T> Function(ElementParser document)>? processorList,
   }) async {
     final document = await loadDocument();
-    final element = document == null ? null : document.body;
+    final element = document?.body;
     final details = {
       if (processorMap != null)
         for (var key in processorMap.keys) key: processorMap[key]!(ElementParser(element)),
@@ -39,7 +39,7 @@ class PageParser {
     return details;
   }
 
-  Future<dynamic> process(dynamic Function(ElementParser elementParser) processor) async {
+  Future<T> process<T>(dynamic Function(ElementParser elementParser) processor) async {
     final elementParser = await loadElementParser();
     return processor(elementParser);
   }
