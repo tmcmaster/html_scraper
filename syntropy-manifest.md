@@ -1,35 +1,24 @@
 ---
-project:
-  name: "html_scraper"
-  description: "Tools for scraping data from web pages" # Escape double quotes in description
-  author: "Tim McMaster"
-  version: "0.1.0"
-
-origin:
-  repo_type: "original"
-  git_url: "https://github.com/tmcmaster/html_scraper"
-  created: "2022-07-02"
-  modified: "2025-05-29"
-
-classification:
-  status: "unsorted"
-  engagement: "shelved"
-  priority: "low"
-  intent: []
-  domain: []
-  audience: "personal"
-
-stack:
-  languages: []
-  frameworks: []
-  databases: []
-  infrastructure: []
-  cloud: "none"
-
-capabilities:
-  features: []
-
-syntropy_id: ""
-collections: []
-tags: []
+Title: html_scraper
+Description: Tools for scraping data from web pages
+Author: Tim McMaster
+Created: '2022-07-02'
+Modified: '2025-05-29'
+Status: concept
+Engagement: back-burner
+Audience: personal
+Priority: sometime
+Version: 0.1.0
+Repo-Type: original
+Repo-Author: tmcmaster
+Repo-Name: html_scraper
+Intent: []
+Domain: []
+Languages:
+- Dart
+Frameworks: []
+Databases: []
+Infrastructure: []
+Features: []
 ---
+
